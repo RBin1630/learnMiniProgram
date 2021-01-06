@@ -1,0 +1,59 @@
+/* pages/home.wxss */
+.container {
+  border: 1px solid #ccc;
+  height: 300px;
+  background-color: aqua;
+  padding: 0;
+}
+.number {
+  vertical-align: middle;
+}
+input {
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+.box {
+  width: 300rpx;
+  height: 300rpx;
+  background-color: orange;
+}
+.canshuchuandi {
+  display: flex;
+}
+.canshuchuandison {
+  flex: 1;
+  text-align: center;
+}
+
+.view1 {
+  width: 600rpx;
+  height: 600rpx;
+  background-color: red;
+  position: relative;
+}
+
+.view2 {
+  width: 400rpx;
+  height: 400rpx;
+  background-color: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.view3 {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.newExternalstyle {
+  color: purple;
+  font-size: 80rpx;
+}

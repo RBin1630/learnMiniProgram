@@ -1,0 +1,49 @@
+<!--pages/home.wxml-->
+<scroll-view scroll-y="true" class="container">
+  <text>Hello {{msg1}}</text>
+  <button bindtap="changeMsg">按钮</button>
+
+  <!-- 数据绑定 -->
+  <view>Hello {{name}}</view>
+
+  <!-- 列表展示 -->
+  <view wx:for="{{stus}}" wx:key="item">{{item.name}}--{{item.age}}--{{item.height}}</view>
+
+  <view>计数器: {{counter}}</view>
+  <button size="mini" bindtap="sub">-</button>
+  <button size="mini" bindtap="add">+</button>
+
+  <button bindtap="selectPic">选择图片</button>
+  <image src="{{imagePath}}" show-menu-by-longpress="{{true}}" mode="aspectFit"></image>
+
+  <view class="number">
+    <text>手机号码：</text>
+    <input type="number" placeholder="请输入手机号码" />
+  </view>
+</scroll-view>
+
+<wxs src="../../wxs/format.wxs" module="formatPrice"></wxs>
+
+<view>{{formatPrice.priceFormat(price)}}</view>
+
+<view class="box"
+      bind:tap="handleTap"
+      bindtouchstart="handleTouchStart"
+      bindtouchend="handleTouchEnd"
+      bindlongpress="handleLongPress"
+      bindtouchmove="handleTouchMove"></view>
+
+<view class="canshuchuandi">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="canshuchuandison" bindtap="canshuchuandievent" data-item="{{item}}" data-index="{{index}}">{{item}}</view>
+  </block>
+</view>
+
+<!-- 事件捕获 事件冒泡 catch是阻止事件捕获或者事件冒泡的写法 -->
+<view class="view1" capture-bind:tap="handleCapture1" bindtap="handletap1">
+  <view class="view2" capture-bind:tap="handleCapture2" bindtap="handletap2">
+    <view class="view3" capture-bind:tap="handleCapture3" catchtap="handletap3"></view>
+  </view>
+</view>
+
+<my-cpn msg="哈哈哈哈" externalstyle="newExternalstyle" bind:increament5="increament5"></my-cpn>

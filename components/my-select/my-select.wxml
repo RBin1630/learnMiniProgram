@@ -1,0 +1,7 @@
+<!--components/my-select/my-select.wxml-->
+<view>
+  <text>当前计数：{{counter}}</text>
+  <slot name="slot1">1</slot>
+  <slot name="slot2">2</slot>
+  <slot name="slot3">3</slot>
+</view>

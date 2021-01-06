@@ -1,0 +1,4 @@
+<!--components/my-cpn/my-cpn.wxml-->
+<text class="title">components/my-cpn/my-cpn.wxml</text>
+<view class="externalstyle">{{msg}}</view>
+<button size="mini" bindtap="increament5">+5</button>

@@ -1,0 +1,11 @@
+<!--pages/profile/profile.wxml-->
+<text>客服微信号：1630smoke</text>
+
+<tab-control titles="{{['流行', '精选', '新款']}}" bind:tabControlItemClick="tabControlItemClick"></tab-control>
+
+<my-select id="my-select">
+  <button slot="slot1">hhhhh</button>
+  <slider slot="slot2"></slider>
+  <image src="/assets/img/tabBar/home.png" slot="slot3"></image>
+</my-select>
+<button size="mini" bindtap="changeCpnData">在页面改变子组件的data</button>
